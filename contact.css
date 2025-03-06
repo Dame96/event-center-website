@@ -1,0 +1,110 @@
+/* Styling for Contact Page */
+
+body {
+    background-color: rgb(207, 211, 211);
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-rows: .25fr 4fr .75fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+}
+
+
+header {
+    grid-area: header;
+    background-color:rgb(41, 40, 40);
+    width:100%;
+    color: whitesmoke;
+}
+
+nav ul {
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    color: rgb(207, 211, 211);
+}
+
+a:link  {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    text-decoration: none;
+    color: rgb(207, 211, 211);
+}
+
+a:visited  {
+   
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    text-decoration: none;
+    color: rgb(207, 211, 211);
+}
+
+a:hover {
+
+    text-decoration:underline;
+    color:green;
+}
+
+main {
+    grid-area: main;
+}
+
+.CONTACT-form {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+input:hover{
+    background-color: lightgreen;
+}
+
+input:focus {
+    border-color: blue;
+    outline: none;
+}
+
+#sub-button {
+    margin-top: 30px;
+    margin: 0 auto;
+    width: 150px;
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+button:active {
+    background-color: darkgreen;
+}
+
+
+footer {
+    grid-area: footer;
+    margin-left: 10px;
+    background-color: rgb(41, 40, 40);
+    color: whitesmoke;
+}
+
+footer p {
+    font-size: 22px;
+}
+
+
+@media screen and (max-width: 750px) {
+    body {
+        display: grid; 
+        grid-template-rows: repeat(autofit,minmax(100px,1fr));
+        grid-template-columns: 100%;
+        gap: 5px;
+        width: 95%;
+    }
+}

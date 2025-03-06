@@ -1,0 +1,89 @@
+/* CSS Styling for Location Page */
+
+body {
+    background-color: rgb(207, 211, 211);
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-rows: .25fr 2fr .75fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+}
+
+
+header {
+    grid-area: header;
+    background-color:rgb(41, 40, 40);
+    width:100%;
+    color: whitesmoke;
+}
+
+#nav-bar ul {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    color: rgb(207, 211, 211);
+}
+
+a:link  {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    text-decoration: none;
+    color: rgb(207, 211, 211);
+}
+
+a:visited  {
+   
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    text-decoration: none;
+    color: rgb(207, 211, 211);
+}
+
+a:hover {
+
+    text-decoration:underline;
+    color:green;
+}
+
+main {
+    grid-area: main;
+}
+
+#main-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#address {
+    font-size: 20px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color:rgb(41, 40, 40);
+    color: whitesmoke;
+    
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        display: grid; 
+        grid-template-rows: repeat(autofit,minmax(100px,1fr));
+        grid-template-columns: 100%;
+        gap: 5px;
+        width: 95%;
+    }
+}

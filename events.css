@@ -1,0 +1,121 @@
+/* Styling for Events Page 
+Using Grid for overall layout. Using Flexbox to precisely adjust items position */
+
+
+
+body {
+    background-color: rgb(207, 211, 211);
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-rows: .25fr 2fr .5fr;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    'footer footer';
+
+}
+
+header {
+    grid-area: header;
+    background-color:rgb(41, 40, 40);
+    width:100%;
+    color: whitesmoke;
+    
+}
+
+nav ul {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    color: rgb(207, 211, 211);
+}
+
+
+
+a:link  {
+   
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    text-decoration: none;
+    color: rgb(207, 211, 211);
+}
+
+a:visited  {
+   
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding:10px;
+    text-decoration: none;
+    color: rgb(207, 211, 211);
+}
+
+
+
+a:hover {
+
+    text-decoration:underline;
+    color:green;
+}
+
+
+aside {
+    grid-area: aside;
+}
+
+img:hover {
+    border: 5px solid green;
+}
+
+main {
+    grid-area: main;
+}
+
+#welcome-message p {
+    font-size:20px;
+}
+
+.pics {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+#EVENTS p, ol {
+    font-size:24px;
+}
+
+#EVENTS {
+    margin-top: 225px;
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(41, 40, 40);
+    color: whitesmoke;
+    
+}
+
+#foot-host p, ul {
+    font-size:18px;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        display:grid;
+        grid-template-rows: .5 2fr 1fr .5;
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        display: grid;
+        grid-template-rows: .5 .5 .5 .5 .5;
+        grid-template-columns: 100%;
+        gap: 5px;
+        width: 95%;
+    }
+}
